@@ -1,26 +1,286 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f5f5;
+  --foreground: #040404;
+  --muted: #9a9a9a;
+  --muted-strong: #6a6a6a;
+  --border: #e8e8e8;
+  --surface: #ebebeb;
+  --surface-soft: #f0f0f0;
+  --page-padding: clamp(20px, 4vw, 56px);
+  --content-max: 1360px;
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --font-display: var(--font-funnel), "Helvetica Neue", sans-serif;
+  --font-body: var(--font-inter), "Helvetica Neue", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-muted-strong: var(--muted-strong);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --font-sans: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #040404;
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* ── Page Shell ── */
+.page-shell {
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+  padding-inline: var(--page-padding);
+}
+
+/* ── Typography ── */
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted-strong);
+}
+
+/* ── Focus ── */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+/* ── Pills ── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: var(--radius-pill);
+  background: #040404;
+  color: #fff;
+  padding: 0.7rem 1.15rem;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 200ms var(--ease);
+}
+
+.pill:hover {
+  opacity: 0.85;
+}
+
+.soft-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  background: #e0e0e0;
+  color: #555;
+  padding: 0.4rem 0.85rem;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* ── Panels ── */
+.rounded-panel {
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.rounded-media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.line-mask {
+  overflow: hidden;
+  display: block;
+}
+
+/* ── Forms ── */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.65rem;
+}
+
+.form-field:focus-within {
+  border-color: var(--foreground);
+}
+
+.form-field input,
+.form-field textarea {
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  padding: 0.25rem 0;
+  outline: none;
+  resize: vertical;
+}
+
+.form-field label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-strong);
+}
+
+/* ── Nav ── */
+.nav-text {
+  font-size: 14px;
+  opacity: 0.85;
+  transition: opacity 180ms var(--ease);
+}
+
+.nav-text:hover {
+  opacity: 1;
+}
+
+/* ── Custom Cursor ── */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              height 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.2s ease;
+  will-change: transform;
+}
+
+.custom-cursor.pointer {
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff;
+  mix-blend-mode: difference;
+}
+
+/* ── Scroll Text Reveal ── */
+.scroll-word {
+  display: inline;
+  color: var(--foreground);
+  transition: opacity 0.1s ease;
+}
+
+/* ── Selected Work Section ── */
+.selected-work-container {
+  position: relative;
+}
+
+.selected-work-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Tech Stack ── */
+.tech-item {
+  transition: color 0.3s var(--ease), transform 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+
+.tech-item:hover {
+  color: #ffffff !important;
+  transform: translateX(8px);
+}
+
+/* Hide scrollbar for smooth scroll */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* ── Mobile cursor hide ── */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+  .custom-cursor {
+    display: none !important;
+  }
 }
