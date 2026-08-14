@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Funnel_Display, Inter } from "next/font/google";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { CustomCursor } from "@/components/CustomCursor";
+import { Preloader } from "@/components/Preloader";
 import "./globals.css";
 
 const funnelDisplay = Funnel_Display({
@@ -152,6 +153,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-full bg-background text-foreground">
+        <Preloader />
         <SmoothScroll>
           <CustomCursor />
           {children}
