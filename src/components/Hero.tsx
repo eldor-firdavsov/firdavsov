@@ -62,14 +62,22 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Column: Hero Blank Slot */}
         <motion.div
           className="relative lg:col-span-6 xl:col-span-6"
           initial={reduce ? false : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
         >
-          <div className="relative overflow-hidden rounded-[24px] sm:rounded-[36px] liquid-glass-border aspect-[4/4.5] sm:aspect-[4/4.5] lg:aspect-[4/5] max-h-[480px] sm:max-h-[580px] lg:max-h-[640px] w-full" />
+          <div className="relative overflow-hidden rounded-[24px] sm:rounded-[36px] liquid-glass-border aspect-[4/4.5] sm:aspect-[4/4.5] lg:aspect-[4/5] max-h-[480px] sm:max-h-[580px] lg:max-h-[640px] w-full">
+            <Image
+              src="/hero-v2.png"
+              alt="Eldor Firdavsov"
+              fill
+              priority
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
