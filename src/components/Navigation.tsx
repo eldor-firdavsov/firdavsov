@@ -31,14 +31,14 @@ export function Navigation() {
           className="pointer-events-auto flex items-center justify-between rounded-[20px] sm:rounded-[24px] px-4 py-2.5 sm:px-6 sm:py-3 transition-all duration-300"
           style={{
             background: scrolled
-              ? "rgba(255, 255, 255, 0.85)"
-              : "rgba(255, 255, 255, 0.70)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            border: "1px solid rgba(0, 0, 0, 0.06)",
+              ? "rgba(244, 239, 230, 0.76)"
+              : "rgba(244, 239, 230, 0.58)",
+            backdropFilter: "blur(6px) saturate(140%)",
+            WebkitBackdropFilter: "blur(6px) saturate(140%)",
+            border: "1px solid rgba(255, 255, 255, 0.8)",
             boxShadow: scrolled
-              ? "0 10px 30px -4px rgba(0, 0, 0, 0.06)"
-              : "0 4px 20px -2px rgba(0, 0, 0, 0.04)",
+              ? "inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.95), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.04), 0 12px 32px -6px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03)"
+              : "inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.90), inset 0 -1px 2px 0 rgba(0, 0, 0, 0.03), 0 6px 20px -4px rgba(0, 0, 0, 0.04)",
           }}
         >
           {/* Left: Brand Emblem + Text Logo + Nav Links */}

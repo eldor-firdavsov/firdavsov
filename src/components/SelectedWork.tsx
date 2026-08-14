@@ -72,7 +72,7 @@ export function SelectedWork() {
           {projects.map((project) => (
             <article
               key={project.slug}
-              className="flex flex-col gap-5 rounded-[24px] bg-[#e8e8e8] p-5 shadow-sm border border-black/5"
+              className="flex flex-col gap-5 rounded-[24px] liquid-glass-border p-5"
             >
               <Link
                 href={`/work/${project.slug}`}
@@ -154,9 +154,10 @@ export function SelectedWork() {
         >
           <div className="page-shell w-full">
             <div
+              className="liquid-glass-border"
               style={{
                 borderRadius: "32px",
-                background: "#e8e8e8",
+                background: "var(--surface)",
                 height: "85vh",
                 overflow: "hidden",
                 display: "grid",

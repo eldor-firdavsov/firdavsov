@@ -10,7 +10,7 @@ export function LabTeaser() {
   return (
     <section id="lab" className="page-shell py-12 md:py-20">
       <motion.div
-        className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#0a0a0a] px-5 py-10 sm:px-8 sm:py-14 md:px-12 md:py-18 lg:px-16 text-white border border-white/10"
+        className="relative overflow-hidden rounded-[24px] sm:rounded-[32px] bg-[#0a0a0a] px-5 py-10 sm:px-8 sm:py-14 md:px-12 md:py-18 lg:px-16 text-white liquid-glass-dark shadow-2xl"
         initial={reduce ? false : { opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={VIEWPORT}

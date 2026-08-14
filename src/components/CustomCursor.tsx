@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -12,7 +13,7 @@ export function CustomCursor() {
     const cursor = cursorRef.current;
     if (!cursor) return;
 
-    // Check for touch device
+    // Check for touch devices
     if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
       return;
     }
@@ -25,9 +26,9 @@ export function CustomCursor() {
       start + (end - start) * factor;
 
     const animate = () => {
-      pos.current.x = lerp(pos.current.x, target.current.x, 0.15);
-      pos.current.y = lerp(pos.current.y, target.current.y, 0.15);
-      cursor.style.transform = `translate(${pos.current.x}px, ${pos.current.y}px) translate(-50%, -50%)`;
+      pos.current.x = lerp(pos.current.x, target.current.x, 0.18);
+      pos.current.y = lerp(pos.current.y, target.current.y, 0.18);
+      cursor.style.transform = `translate3d(${pos.current.x}px, ${pos.current.y}px, 0) translate(-50%, -50%)`;
       rafId.current = requestAnimationFrame(animate);
     };
 
@@ -48,16 +49,13 @@ export function CustomCursor() {
     window.addEventListener("mousemove", onMouseMove, { passive: true });
     rafId.current = requestAnimationFrame(animate);
 
-    // Initial bind + MutationObserver to catch dynamically added elements
     let elements = addInteractiveListeners();
 
     const observer = new MutationObserver(() => {
-      // Unbind old
       elements.forEach((el) => {
         el.removeEventListener("mouseenter", onEnterInteractive);
         el.removeEventListener("mouseleave", onLeaveInteractive);
       });
-      // Rebind
       elements = addInteractiveListeners();
     });
 
@@ -74,5 +72,18 @@ export function CustomCursor() {
     };
   }, []);
 
-  return <div ref={cursorRef} className="custom-cursor" />;
+  return (
+    <div ref={cursorRef} className="custom-cursor flex items-center justify-center pointer-events-none">
+      <div className="relative h-full w-full">
+        <Image
+          src="/logo-icon.png"
+          alt="Logo Cursor"
+          fill
+          unoptimized
+          priority
+          className="object-contain select-none brightness-0 invert"
+        />
+      </div>
+    </div>
+  );
 }
