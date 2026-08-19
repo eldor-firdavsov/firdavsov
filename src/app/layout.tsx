@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Funnel_Display, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { CustomCursor } from "@/components/CustomCursor";
 import { Preloader } from "@/components/Preloader";
@@ -159,6 +160,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CustomCursor />
           {children}
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
