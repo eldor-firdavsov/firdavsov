@@ -22,17 +22,18 @@ const siteUrl = "https://www.firdavsov.uz";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Eldor Firdavsov — Senior Frontend Developer & AI/ML Engineer | Firdavsov",
-    template: "%s | Eldor Firdavsov",
+    default: "Firdavsov (Eldor Firdavsov) — Official Website & Portfolio",
+    template: "%s | Firdavsov",
   },
   description:
-    "Official portfolio and website of Eldor Firdavsov (Eldor / Firdavsov / firdavsov.uz) — Senior Frontend Developer & AI/ML Engineer. High-performance web products, interactive UI, and machine learning.",
+    "Official website of Eldor Firdavsov (Firdavsov / firdavsov.uz) — Senior Frontend Developer & AI/ML Engineer. High-performance web products, interactive UI, and machine learning.",
   keywords: [
-    "Eldor",
     "Firdavsov",
-    "Eldor Firdavsov",
+    "firdavsov",
     "firdavsov.uz",
     "www.firdavsov.uz",
+    "Eldor Firdavsov",
+    "Eldor",
     "edlor",
     "frontend developer",
     "fullstack developer",
@@ -65,24 +66,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    title: "Eldor Firdavsov — Senior Frontend Developer & Fullstack Engineer",
+    title: "Firdavsov (Eldor Firdavsov) — Official Website & Portfolio",
     description:
-      "Explore the work, projects, and lab experiments of Eldor Firdavsov (edlor / firdavsov) — Senior Frontend Developer & Fullstack Engineer.",
-    siteName: "Eldor Firdavsov Portfolio",
+      "Explore the work, projects, and lab experiments of Eldor Firdavsov (Firdavsov / firdavsov.uz) — Senior Frontend Developer & AI/ML Engineer.",
+    siteName: "Firdavsov — Eldor Firdavsov Portfolio",
     images: [
       {
         url: "/eldor-hero.png",
         width: 1200,
         height: 630,
-        alt: "Eldor Firdavsov — Senior Frontend Developer & Fullstack Engineer",
+        alt: "Firdavsov — Eldor Firdavsov",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eldor Firdavsov — Frontend & Fullstack Developer",
+    title: "Firdavsov (Eldor Firdavsov) — Official Website",
     description:
-      "Senior Frontend Developer & Fullstack Engineer. Specializing in React, Next.js, and AI/ML.",
+      "Senior Frontend Developer & AI/ML Engineer. Explore projects and lab experiments at firdavsov.uz.",
     images: ["/eldor-hero.png"],
     creator: "@eldor_firdavsov",
   },
@@ -106,12 +107,14 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
       "name": "Eldor Firdavsov",
-      "alternateName": ["Eldor", "edlor", "firdavsov", "Eldor Firdavsov"],
-      "jobTitle": "Senior Frontend Developer & Fullstack Engineer",
+      "givenName": "Eldor",
+      "familyName": "Firdavsov",
+      "alternateName": ["Firdavsov", "firdavsov", "firdavsov.uz", "edlor", "Eldor Firdavsov"],
+      "jobTitle": "Senior Frontend Developer & AI/ML Engineer",
       "description":
-        "Senior Frontend Developer & Fullstack Engineer specializing in React, Next.js, TypeScript, and AI/ML applications.",
+        "Senior Frontend Developer & AI/ML Engineer specializing in React, Next.js, TypeScript, and machine learning applications.",
       "url": siteUrl,
-      "image": `${siteUrl}/eldor-hero.png`,
+      "image": `${siteUrl}/hero-v3.jpg`,
       "sameAs": [
         "https://github.com/eldor-firdavsov",
         "https://www.linkedin.com/in/eldor-firdavsov",
@@ -132,9 +135,10 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       "url": siteUrl,
-      "name": "Eldor Firdavsov — Frontend & Fullstack Developer",
+      "name": "Firdavsov — Eldor Firdavsov",
+      "alternateName": ["firdavsov.uz", "Firdavsov Portfolio"],
       "description":
-        "Official website and portfolio of Eldor Firdavsov — Senior Frontend Developer & Fullstack Engineer.",
+        "Official website and portfolio of Eldor Firdavsov — Senior Frontend Developer & AI/ML Engineer.",
       "publisher": {
         "@id": `${siteUrl}/#person`
       }
