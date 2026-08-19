@@ -8,9 +8,9 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
-      wheelMultiplier: 1.0,
-      touchMultiplier: 1.2,
+      duration: 0.8,
+      wheelMultiplier: 1.4,
+      touchMultiplier: 1.4,
       easing: (t: number) => 1 - Math.pow(1 - t, 5),
       infinite: false,
     });

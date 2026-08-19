@@ -16,29 +16,27 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://eldorfirdavsov.com";
+const siteUrl = "https://www.firdavsov.uz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Eldor Firdavsov — Senior Frontend Developer & Fullstack Engineer | Eldor",
-    template: "%s | Eldor Firdavsov — Frontend & Fullstack Developer",
+    default: "Eldor Firdavsov — Senior Frontend Developer & AI/ML Engineer | Firdavsov",
+    template: "%s | Eldor Firdavsov",
   },
   description:
-    "Official portfolio of Eldor Firdavsov (Eldor / edlor / firdavsov) — Senior Frontend Developer & Fullstack Engineer. Building high-performance web products, interactive user experiences, and AI/ML applications.",
+    "Official portfolio and website of Eldor Firdavsov (Eldor / Firdavsov / firdavsov.uz) — Senior Frontend Developer & AI/ML Engineer. High-performance web products, interactive UI, and machine learning.",
   keywords: [
     "Eldor",
+    "Firdavsov",
     "Eldor Firdavsov",
+    "firdavsov.uz",
+    "www.firdavsov.uz",
     "edlor",
-    "firdavsov",
     "frontend developer",
     "fullstack developer",
     "senior frontend developer",
     "frontend engineer",
-    "fullstack engineer",
-    "React developer",
-    "Next.js developer",
-    "TypeScript developer",
     "AI ML engineer",
     "software engineer",
     "Samarkand developer",
@@ -94,6 +92,9 @@ export const metadata: Metadata = {
     ],
     shortcut: "/icon.png",
     apple: "/apple-icon.png",
+  },
+  verification: {
+    google: "google6488924126c35f2b",
   },
 };
 

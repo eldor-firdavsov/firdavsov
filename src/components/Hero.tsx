@@ -7,6 +7,7 @@ import { EASE } from "@/lib/motion";
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const shouldAnimate = reduce === false;
 
   return (
     <section className="page-shell flex min-h-[90vh] flex-col justify-center pb-16 pt-24 md:pt-32 md:pb-20 lg:min-h-screen lg:pt-36 lg:pb-24">
@@ -15,7 +16,7 @@ export function Hero() {
         <div className="flex flex-col lg:col-span-6 xl:col-span-6">
           <motion.p
             className="label text-[11px] sm:text-[12px] font-semibold tracking-[0.14em] uppercase text-muted-strong"
-            initial={reduce ? false : { opacity: 0, y: 10 }}
+            initial={shouldAnimate ? { opacity: 0, y: 10 } : false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: EASE }}
           >
@@ -24,7 +25,7 @@ export function Hero() {
 
           <motion.h1
             className="display mt-4 sm:mt-6 text-[clamp(2.5rem,8vw,5.5rem)] font-bold uppercase tracking-[-0.04em] leading-[0.94] text-foreground"
-            initial={reduce ? false : { opacity: 0, y: 16 }}
+            initial={shouldAnimate ? { opacity: 0, y: 16 } : false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
           >
@@ -33,7 +34,7 @@ export function Hero() {
 
           <motion.p
             className="mt-2.5 text-[12px] sm:text-[13px] font-semibold uppercase tracking-[0.06em] text-muted-strong"
-            initial={reduce ? false : { opacity: 0, y: 10 }}
+            initial={shouldAnimate ? { opacity: 0, y: 10 } : false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: EASE }}
           >
@@ -42,18 +43,18 @@ export function Hero() {
 
           <motion.p
             className="mt-6 sm:mt-8 max-w-lg text-[14px] leading-relaxed text-muted-strong sm:text-[15px] md:text-base"
-            initial={reduce ? false : { opacity: 0, y: 12 }}
+            initial={shouldAnimate ? { opacity: 0, y: 12 } : false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35, ease: EASE }}
           >
             I build products people actually use — realtime systems, teaching
-            tools, and interfaces that don&apos;t make you think twice. Currently
+            tools, and interfaces that don't make you think twice. Currently
             moving from frontend engineering into applied machine learning.
           </motion.p>
 
           <motion.div
             className="mt-8 sm:mt-10 flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-2 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] text-muted font-medium"
-            initial={reduce ? false : { opacity: 0 }}
+            initial={shouldAnimate ? { opacity: 0 } : false}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.55, ease: EASE }}
           >
@@ -62,19 +63,20 @@ export function Hero() {
           </motion.div>
         </div>
 
+        {/* Right Column: Hero Image Frame */}
         <motion.div
           className="relative lg:col-span-6 xl:col-span-6"
-          initial={reduce ? false : { opacity: 0, scale: 0.96 }}
+          initial={shouldAnimate ? { opacity: 0, scale: 0.96 } : false}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
         >
           <div className="relative overflow-hidden rounded-[24px] sm:rounded-[36px] liquid-glass-border aspect-[4/4.5] sm:aspect-[4/4.5] lg:aspect-[4/5] max-h-[480px] sm:max-h-[580px] lg:max-h-[640px] w-full">
             <Image
-              src="/hero-v2.png"
+              src="/hero-v3.jpg"
               alt="Eldor Firdavsov"
               fill
               priority
-              className="object-cover object-center"
+              className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
