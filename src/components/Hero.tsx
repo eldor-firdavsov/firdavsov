@@ -62,18 +62,19 @@ export function Hero() {
 
         {/* Right Column: Hero Image Frame */}
         <motion.div
-          className="relative lg:col-span-6 xl:col-span-6"
+          className="relative lg:col-span-6 xl:col-span-6 w-full"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: EASE }}
         >
-          <div className="relative overflow-hidden rounded-[24px] sm:rounded-[36px] liquid-glass-border aspect-[4/4.5] sm:aspect-[4/4.5] lg:aspect-[4/5] max-h-[480px] sm:max-h-[580px] lg:max-h-[640px] w-full">
+          <div className="relative overflow-hidden rounded-[24px] sm:rounded-[36px] liquid-glass-border aspect-[4/4.5] sm:aspect-[4/4.5] lg:aspect-[4/5] min-h-[360px] sm:min-h-[440px] lg:min-h-[520px] max-h-[480px] sm:max-h-[580px] lg:max-h-[640px] w-full z-10">
             <Image
               src="/hero-v3.jpg"
               alt="Eldor Firdavsov"
               fill
               priority
-              className="object-cover object-top"
+              unoptimized
+              className="object-cover object-top z-0"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
