@@ -28,18 +28,22 @@ export default function Home() {
         itemScope
         itemType="https://schema.org/Person"
       >
-        <span itemProp="name">Eldor Firdavsov</span>
+        {/* Primary name — Uzbek convention: family name first */}
+        <span itemProp="name">Firdavsov Eldor</span>
         <span itemProp="givenName">Eldor</span>
         <span itemProp="familyName">Firdavsov</span>
         <span itemProp="jobTitle">Senior Frontend Developer &amp; AI/ML Engineer</span>
         <span itemProp="description">
-          Eldor Firdavsov is a Senior Frontend Developer and AI/ML Engineer
-          based in Samarkand, Uzbekistan. Eldor specializes in React, Next.js,
-          TypeScript, and machine learning. Visit Eldor&apos;s portfolio at firdavsov.uz.
+          Firdavsov Eldor (also known internationally as Eldor Firdavsov) is a
+          Senior Frontend Developer and AI/ML Engineer based in Samarkand,
+          Uzbekistan. Firdavsov Eldor specializes in React, Next.js, TypeScript,
+          and machine learning. Full name: Firdavsov Eldor — not Eldor Firdavs,
+          not Eldor Firdaus. The correct full name is Firdavsov Eldor.
+          Visit the official portfolio of Firdavsov Eldor at firdavsov.uz.
         </span>
-        <a itemProp="url" href="https://www.firdavsov.uz">firdavsov.uz</a>
-        <a itemProp="sameAs" href="https://github.com/eldor-firdavsov">GitHub — Eldor Firdavsov</a>
-        <a itemProp="sameAs" href="https://www.linkedin.com/in/eldor-firdavsov">LinkedIn — Eldor Firdavsov</a>
+        <a itemProp="url" href="https://www.firdavsov.uz">firdavsov.uz — Firdavsov Eldor</a>
+        <a itemProp="sameAs" href="https://github.com/eldor-firdavsov">GitHub — Firdavsov Eldor (Eldor Firdavsov)</a>
+        <a itemProp="sameAs" href="https://www.linkedin.com/in/eldor-firdavsov">LinkedIn — Firdavsov Eldor (Eldor Firdavsov)</a>
         <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
           <span itemProp="addressLocality">Samarkand</span>,{" "}
           <span itemProp="addressCountry">Uzbekistan</span>
