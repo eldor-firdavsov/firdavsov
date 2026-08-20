@@ -229,6 +229,54 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${funnelDisplay.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
+        {/* Theme & PWA */}
+        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="color-scheme" content="dark light" />
+        <meta name="msapplication-TileColor" content="#0a0a0a" />
+        <meta name="msapplication-TileImage" content="/icon.png" />
+        <meta name="msapplication-config" content="none" />
+
+        {/* Apple Mobile Web App */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Eldor Firdavsov" />
+
+        {/* Format Detection */}
+        <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+
+        {/* Geo / Location */}
+        <meta name="geo.region" content="UZ-SA" />
+        <meta name="geo.placename" content="Samarkand, Uzbekistan" />
+        <meta name="geo.position" content="39.6547;66.9758" />
+        <meta name="ICBM" content="39.6547, 66.9758" />
+
+        {/* Content / SEO hints */}
+        <meta name="rating" content="general" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="language" content="English" />
+        <meta name="copyright" content="Eldor Firdavsov" />
+        <meta name="author" content="Eldor Firdavsov" />
+        <meta name="designer" content="Eldor Firdavsov" />
+        <meta name="reply-to" content="eldor@firdavsov.uz" />
+        <meta name="owner" content="Eldor Firdavsov" />
+        <meta name="url" content="https://www.firdavsov.uz" />
+        <meta name="identifier-URL" content="https://www.firdavsov.uz" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="distribution" content="Global" />
+
+        {/* Dublin Core */}
+        <meta name="DC.title" content="Eldor Firdavsov — Senior Frontend Developer & AI/ML Engineer" />
+        <meta name="DC.creator" content="Eldor Firdavsov" />
+        <meta name="DC.subject" content="Frontend Development, AI/ML Engineering, Portfolio, React, Next.js" />
+        <meta name="DC.description" content="Official portfolio of Eldor Firdavsov — Senior Frontend Developer & AI/ML Engineer based in Samarkand, Uzbekistan." />
+        <meta name="DC.publisher" content="Eldor Firdavsov" />
+        <meta name="DC.contributor" content="Eldor Firdavsov" />
+        <meta name="DC.language" content="en" />
+        <meta name="DC.coverage" content="Worldwide" />
+        <meta name="DC.rights" content="© 2025 Eldor Firdavsov. All rights reserved." />
+        <meta name="DC.identifier" content="https://www.firdavsov.uz" />
+
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
