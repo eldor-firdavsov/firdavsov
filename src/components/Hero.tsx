@@ -44,9 +44,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35, ease: EASE }}
           >
-            I build products people actually use — realtime systems, teaching
-            tools, and interfaces that don't make you think twice. Currently
-            moving from frontend engineering into applied machine learning.
+            Eldor builds products people actually use — realtime systems,
+            teaching tools, and interfaces that don&apos;t make you think twice.
+            Currently moving from frontend engineering into applied machine
+            learning.
           </motion.p>
 
           <motion.div

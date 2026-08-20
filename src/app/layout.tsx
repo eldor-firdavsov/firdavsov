@@ -276,6 +276,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="DC.rights" content="© 2025 Eldor Firdavsov. All rights reserved." />
         <meta name="DC.identifier" content="https://www.firdavsov.uz" />
 
+        {/* Identity / rel=me — helps Google link this site to Eldor's profiles */}
+        <link rel="me" href="https://github.com/eldor-firdavsov" />
+        <link rel="me" href="https://www.linkedin.com/in/eldor-firdavsov" />
+        <link rel="me" href="https://t.me/eldor_firdavsov" />
+        <link rel="me" href="mailto:firdavsove1@gmail.com" />
+
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
         {/* Structured Data */}
         <script
           type="application/ld+json"
