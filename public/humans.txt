@@ -1,0 +1,20 @@
+/* TEAM */
+
+Developer & Designer: Firdavsov Eldor
+Also known as: Eldor Firdavsov
+Role: Senior Frontend Developer & AI/ML Engineer
+Location: Samarkand, Uzbekistan
+Website: https://www.firdavsov.uz
+GitHub: https://github.com/eldor-firdavsov
+LinkedIn: https://www.linkedin.com/in/eldor-firdavsov
+Telegram: https://t.me/eldor_firdavsov
+Email: firdavsove1@gmail.com
+
+/* SITE */
+
+Last update: 2025
+Standards: HTML5, CSS3, JavaScript ES2024
+Components: React, Next.js, TypeScript
+Hosting: Vercel
+Language: English
+Doctype: HTML5
