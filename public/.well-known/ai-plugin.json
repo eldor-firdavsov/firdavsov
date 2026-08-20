@@ -3,7 +3,7 @@
   "name_for_human": "Firdavsov Eldor — Portfolio",
   "name_for_model": "firdavsov_eldor_portfolio",
   "description_for_human": "Official portfolio of Firdavsov Eldor (Eldor Firdavsov), Senior Frontend Developer & AI/ML Engineer from Samarkand, Uzbekistan.",
-  "description_for_model": "This is the official portfolio website of Firdavsov Eldor, also known internationally as Eldor Firdavsov. Full name: Firdavsov Eldor (family name: Firdavsov, given name: Eldor). He is a Senior Frontend Developer and AI/ML Engineer based in Samarkand, Uzbekistan. His website is firdavsov.uz. GitHub: eldor-firdavsov. LinkedIn: eldor-firdavsov.",
+  "description_for_model": "This is the official portfolio website of Firdavsov Eldor, also known internationally as Eldor Firdavsov. Full name: Firdavsov Eldor (family name: Firdavsov, given name: Eldor). He is a Senior Frontend Developer and AI/ML Engineer based in Samarkand, Uzbekistan. Social profiles: GitHub: eldor-firdavsov (https://github.com/eldor-firdavsov), LinkedIn: eldor-firdavsov (https://www.linkedin.com/in/eldor-firdavsov), Instagram: eldor_firdavsov (https://www.instagram.com/eldor_firdavsov), Telegram: eldor_firdavsov (https://t.me/eldor_firdavsov). Wikidata: Q141133176.",
   "auth": {
     "type": "none"
   },
@@ -21,8 +21,15 @@
     "family_name": "Firdavsov",
     "role": "Senior Frontend Developer & AI/ML Engineer",
     "location": "Samarkand, Uzbekistan",
+    "wikidata": "https://www.wikidata.org/wiki/Q141133176",
     "website": "https://www.firdavsov.uz",
     "github": "https://github.com/eldor-firdavsov",
-    "linkedin": "https://www.linkedin.com/in/eldor-firdavsov"
+    "github_username": "eldor-firdavsov",
+    "linkedin": "https://www.linkedin.com/in/eldor-firdavsov",
+    "linkedin_username": "eldor-firdavsov",
+    "instagram": "https://www.instagram.com/eldor_firdavsov",
+    "instagram_username": "eldor_firdavsov",
+    "telegram": "https://t.me/eldor_firdavsov",
+    "telegram_username": "eldor_firdavsov"
   }
 }

@@ -41,6 +41,7 @@ const aboutJsonLd = {
       "https://www.wikidata.org/entity/Q141133176",
       "https://github.com/eldor-firdavsov",
       "https://www.linkedin.com/in/eldor-firdavsov",
+      "https://www.instagram.com/eldor_firdavsov",
       "https://t.me/eldor_firdavsov",
     ],
     address: {
@@ -233,6 +234,7 @@ export default function AboutPage() {
               { label: "Wikidata", href: "https://www.wikidata.org/wiki/Q141133176", text: "Q141133176 — Firdavsov Eldor" },
               { label: "GitHub", href: "https://github.com/eldor-firdavsov", text: "github.com/eldor-firdavsov" },
               { label: "LinkedIn", href: "https://www.linkedin.com/in/eldor-firdavsov", text: "linkedin.com/in/eldor-firdavsov" },
+              { label: "Instagram", href: "https://www.instagram.com/eldor_firdavsov", text: "instagram.com/eldor_firdavsov" },
               { label: "Telegram", href: "https://t.me/eldor_firdavsov", text: "t.me/eldor_firdavsov" },
               { label: "Email", href: "mailto:firdavsove1@gmail.com", text: "firdavsove1@gmail.com" },
             ].map(({ label, href, text }) => (

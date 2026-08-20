@@ -42,8 +42,11 @@ export default function Home() {
           Visit the official portfolio of Firdavsov Eldor at firdavsov.uz.
         </span>
         <a itemProp="url" href="https://www.firdavsov.uz">firdavsov.uz — Firdavsov Eldor</a>
-        <a itemProp="sameAs" href="https://github.com/eldor-firdavsov">GitHub — Firdavsov Eldor (Eldor Firdavsov)</a>
-        <a itemProp="sameAs" href="https://www.linkedin.com/in/eldor-firdavsov">LinkedIn — Firdavsov Eldor (Eldor Firdavsov)</a>
+        <a itemProp="sameAs" href="https://www.wikidata.org/wiki/Q141133176">Wikidata — Firdavsov Eldor (Q141133176)</a>
+        <a itemProp="sameAs" href="https://github.com/eldor-firdavsov">GitHub — Firdavsov Eldor (eldor-firdavsov)</a>
+        <a itemProp="sameAs" href="https://www.linkedin.com/in/eldor-firdavsov">LinkedIn — Firdavsov Eldor (eldor-firdavsov)</a>
+        <a itemProp="sameAs" href="https://www.instagram.com/eldor_firdavsov">Instagram — Firdavsov Eldor (eldor_firdavsov)</a>
+        <a itemProp="sameAs" href="https://t.me/eldor_firdavsov">Telegram — Firdavsov Eldor (eldor_firdavsov)</a>
         <span itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
           <span itemProp="addressLocality">Samarkand</span>,{" "}
           <span itemProp="addressCountry">Uzbekistan</span>

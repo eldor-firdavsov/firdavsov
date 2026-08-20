@@ -5,10 +5,13 @@ Also known as: Eldor Firdavsov
 Role: Senior Frontend Developer & AI/ML Engineer
 Location: Samarkand, Uzbekistan
 Website: https://www.firdavsov.uz
-GitHub: https://github.com/eldor-firdavsov
-LinkedIn: https://www.linkedin.com/in/eldor-firdavsov
-Telegram: https://t.me/eldor_firdavsov
+
+GitHub: https://github.com/eldor-firdavsov (username: eldor-firdavsov)
+LinkedIn: https://www.linkedin.com/in/eldor-firdavsov (username: eldor-firdavsov)
+Instagram: https://www.instagram.com/eldor_firdavsov (username: eldor_firdavsov)
+Telegram: https://t.me/eldor_firdavsov (username: eldor_firdavsov)
 Email: firdavsove1@gmail.com
+Wikidata: https://www.wikidata.org/wiki/Q141133176
 
 /* SITE */
 

@@ -37,6 +37,16 @@ export const metadata: Metadata = {
     "firdavsov.uz",
     "www.firdavsov.uz",
     "Eldor",
+    "eldor_firdavsov",
+    "@eldor_firdavsov",
+    "eldor-firdavsov",
+    "eldor firdavsov instagram",
+    "eldor_firdavsov instagram",
+    "eldor firdavsov telegram",
+    "eldor_firdavsov telegram",
+    "eldor firdavsov github",
+    "eldor-firdavsov github",
+    "eldor firdavsov linkedin",
     "firdavsov eldor portfolio",
     "firdavsov eldor developer",
     "eldor firdavsov portfolio",
@@ -176,6 +186,7 @@ const jsonLd = {
         "https://www.wikidata.org/entity/Q141133176",
         "https://github.com/eldor-firdavsov",
         "https://www.linkedin.com/in/eldor-firdavsov",
+        "https://www.instagram.com/eldor_firdavsov",
         "https://t.me/eldor_firdavsov"
       ],
       "knowsAbout": [
@@ -295,8 +306,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Identity / rel=me — helps Google link this site to Eldor's profiles */}
         <link rel="me" href="https://github.com/eldor-firdavsov" />
         <link rel="me" href="https://www.linkedin.com/in/eldor-firdavsov" />
+        <link rel="me" href="https://www.instagram.com/eldor_firdavsov" />
         <link rel="me" href="https://t.me/eldor_firdavsov" />
         <link rel="me" href="mailto:firdavsove1@gmail.com" />
+
+        {/* Social profile meta tags */}
+        <meta name="instagram" content="eldor_firdavsov" />
+        <meta name="telegram" content="eldor_firdavsov" />
+        <meta name="github" content="eldor-firdavsov" />
+        <meta name="linkedin" content="eldor-firdavsov" />
 
         {/* Author & humans.txt — read by AI crawlers */}
         <link rel="author" href="/humans.txt" />

@@ -23,17 +23,26 @@ export const socials = [
   {
     href: "https://github.com/eldor-firdavsov",
     label: "GitHub",
+    username: "eldor-firdavsov",
   },
   {
     href: "https://www.linkedin.com/in/eldor-firdavsov",
     label: "LinkedIn",
+    username: "eldor-firdavsov",
+  },
+  {
+    href: "https://www.instagram.com/eldor_firdavsov",
+    label: "Instagram",
+    username: "eldor_firdavsov",
   },
   {
     href: "https://t.me/eldor_firdavsov",
     label: "Telegram",
+    username: "eldor_firdavsov",
   },
   {
     href: "mailto:firdavsove1@gmail.com",
     label: "Email",
+    username: "firdavsove1@gmail.com",
   },
 ] as const;
