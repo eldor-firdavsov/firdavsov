@@ -172,6 +172,8 @@ const jsonLd = {
       },
       "sameAs": [
         siteUrl,
+        "https://www.wikidata.org/wiki/Q141133176",
+        "https://www.wikidata.org/entity/Q141133176",
         "https://github.com/eldor-firdavsov",
         "https://www.linkedin.com/in/eldor-firdavsov",
         "https://t.me/eldor_firdavsov"

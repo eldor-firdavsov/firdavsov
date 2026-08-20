@@ -37,6 +37,8 @@ const aboutJsonLd = {
     url: "https://www.firdavsov.uz",
     sameAs: [
       "https://www.firdavsov.uz",
+      "https://www.wikidata.org/wiki/Q141133176",
+      "https://www.wikidata.org/entity/Q141133176",
       "https://github.com/eldor-firdavsov",
       "https://www.linkedin.com/in/eldor-firdavsov",
       "https://t.me/eldor_firdavsov",
@@ -228,6 +230,7 @@ export default function AboutPage() {
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { label: "Website", href: "https://www.firdavsov.uz", text: "firdavsov.uz" },
+              { label: "Wikidata", href: "https://www.wikidata.org/wiki/Q141133176", text: "Q141133176 — Firdavsov Eldor" },
               { label: "GitHub", href: "https://github.com/eldor-firdavsov", text: "github.com/eldor-firdavsov" },
               { label: "LinkedIn", href: "https://www.linkedin.com/in/eldor-firdavsov", text: "linkedin.com/in/eldor-firdavsov" },
               { label: "Telegram", href: "https://t.me/eldor_firdavsov", text: "t.me/eldor_firdavsov" },
