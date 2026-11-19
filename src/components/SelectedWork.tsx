@@ -122,6 +122,19 @@ export function SelectedWork() {
                       <span aria-hidden style={{ color: "#040404" }}>↗</span>
                     </a>
                   )}
+                  {project.live?.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-black/20 px-4 py-2 text-[13px] font-semibold transition-all shadow-sm shrink-0"
+                      style={{ color: "#040404", backgroundColor: "#ffffff" }}
+                    >
+                      <span style={{ color: "#040404" }}>{link.label}</span>
+                      <span aria-hidden style={{ color: "#040404" }}>↗</span>
+                    </a>
+                  ))}
                 </div>
               </div>
             </article>
@@ -274,6 +287,19 @@ export function SelectedWork() {
                               <span aria-hidden style={{ color: "#040404" }} className="text-[14px]">↗</span>
                             </a>
                           )}
+                          {activeProject.live?.map((link) => (
+                            <a
+                              key={link.href}
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 rounded-full border border-black/20 px-4.5 py-2 text-[13px] font-semibold transition-all hover:bg-black/5 shadow-sm shrink-0"
+                              style={{ color: "#040404", backgroundColor: "#ffffff" }}
+                            >
+                              <span style={{ color: "#040404" }}>{link.label}</span>
+                              <span aria-hidden style={{ color: "#040404" }}>↗</span>
+                            </a>
+                          ))}
                         </motion.div>
                       </motion.div>
                     )}

@@ -63,6 +63,19 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 <span aria-hidden style={{ color: "#040404" }}>↗</span>
               </a>
             )}
+            {project.live?.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-full border border-black/20 px-3.5 py-1.5 text-[12px] font-semibold transition-all hover:bg-black/5 shadow-sm shrink-0"
+                style={{ color: "#040404", backgroundColor: "#ffffff" }}
+              >
+                <span style={{ color: "#040404" }}>{link.label}</span>
+                <span aria-hidden style={{ color: "#040404" }}>↗</span>
+              </a>
+            ))}
           </div>
         </div>
 

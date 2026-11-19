@@ -77,6 +77,24 @@ export default async function ProjectPage({ params }: PageProps) {
                     </dd>
                   </div>
                 )}
+                {project.live && (
+                  <div className="col-span-2">
+                    <dt className="text-muted">Live</dt>
+                    <dd className="mt-1 flex flex-wrap gap-x-5 gap-y-1">
+                      {project.live.map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline underline-offset-4"
+                        >
+                          {link.label} ↗
+                        </a>
+                      ))}
+                    </dd>
+                  </div>
+                )}
               </dl>
             </div>
 
@@ -122,6 +140,37 @@ export default async function ProjectPage({ params }: PageProps) {
               </section>
             )}
           </div>
+
+          {project.screenshots && (
+            <section className="mt-12 border-t border-border pt-10">
+              <h2 className="label mb-5 uppercase tracking-[0.08em]">Screenshots</h2>
+              <div className="grid gap-5 md:grid-cols-2">
+                {project.screenshots.map((shot) => (
+                  <figure
+                    key={shot.src}
+                    className={shot.mobile ? "md:col-span-1 flex flex-col items-center" : "md:col-span-2"}
+                  >
+                    <div
+                      className={`rounded-media relative w-full overflow-hidden border border-border bg-surface ${
+                        shot.mobile ? "aspect-[390/844] max-w-[320px]" : "aspect-[16/10]"
+                      }`}
+                    >
+                      <Image
+                        src={shot.src}
+                        alt={shot.alt}
+                        fill
+                        className="object-cover object-top"
+                        sizes={shot.mobile ? "320px" : "(max-width: 768px) 100vw, 1100px"}
+                      />
+                    </div>
+                    <figcaption className="mt-2 text-[13px] text-muted-strong">
+                      {shot.caption}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </section>
+          )}
 
           {project.decisions && (
             <section className="mt-12 border-t border-border pt-10">

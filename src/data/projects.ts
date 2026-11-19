@@ -9,6 +9,8 @@ export type Project = {
   accent: string;
   image: string;
   github?: string;
+  live?: { label: string; href: string }[];
+  screenshots?: { src: string; alt: string; caption: string; mobile?: boolean }[];
   problem?: string;
   approach?: string;
   result?: string;
@@ -17,8 +19,79 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "navbatgo",
+    slug: "uzhamyon",
     number: "01",
+    title: "UzHamyon",
+    category: "Product / AI / Telegram",
+    description:
+      "An AI expense tracker inside Telegram. Type or say “Taksiga 25 ming, tushlikka 40 ming berdim” — the bot finds the amounts, sorts them into categories, and saves them once you confirm.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Gemini AI",
+      "Telegram Bot API",
+      "Tailwind",
+    ],
+    featured: true,
+    accent: "#1b5e20",
+    image: "/projects/uzhamyon-styled.png",
+    github: "https://github.com/eldor-firdavsov/UzHamyon",
+    live: [
+      { label: "Landing page", href: "https://uzhamyon-landing.vercel.app/" },
+      { label: "Open the bot", href: "https://t.me/uz_hamyonbot" },
+    ],
+    screenshots: [
+      { src: "/projects/uzhamyon-landing.png", alt: "UzHamyon landing page", caption: "Landing page" },
+      { src: "/projects/uzhamyon-app.png", alt: "UzHamyon Mini App dashboard", caption: "Mini App dashboard" },
+      { src: "/projects/uzhamyon-app-mobile.png", alt: "UzHamyon Mini App on mobile", caption: "Mini App · mobile", mobile: true },
+      { src: "/projects/uzhamyon-landing-mobile.png", alt: "UzHamyon landing page on mobile", caption: "Landing · mobile", mobile: true },
+    ],
+    problem:
+      "Expense apps ask for too much: open the app, pick a category, type the amount. Most people give up after a week.",
+    approach:
+      "Moved tracking into a chat people already use. Gemini AI reads plain Uzbek text or voice messages, extracts every amount, suggests categories, and asks for a one-tap confirmation. A Telegram Mini App shows the balance, cash-flow charts and insights.",
+    result:
+      "Logging an expense takes one message. No app to install, no forms — free in Telegram as @uz_hamyonbot.",
+    decisions: [
+      "Text and voice input — several expenses in one message",
+      "Confirm-before-save so the AI never writes data on its own",
+      "Telegram Mini App for balance, charts and history",
+    ],
+  },
+  {
+    slug: "hometask",
+    number: "02",
+    title: "HomeTask",
+    category: "Education / AI / Platform",
+    description:
+      "A homework and IELTS platform for teachers and students — task library, assignments, reviews, and a computer-delivered IELTS Reading exam with AI band scoring.",
+    technologies: ["React", "Vite", "Supabase", "Gemini AI", "Tailwind"],
+    accent: "#1d4a35",
+    image: "/projects/hometask-styled.png",
+    github: "https://github.com/eldor-firdavsov/HomeTask",
+    live: [{ label: "Live demo", href: "https://home-task-virid.vercel.app/" }],
+    screenshots: [
+      { src: "/projects/hometask-teacher-dashboard.png", alt: "HomeTask teacher dashboard", caption: "Teacher dashboard" },
+      { src: "/projects/hometask-reading-exam.png", alt: "IELTS computer-delivered reading exam", caption: "IELTS CD reading exam with live timer" },
+      { src: "/projects/hometask-student-dashboard.png", alt: "HomeTask student dashboard", caption: "Student dashboard" },
+      { src: "/projects/hometask-reading-tests.png", alt: "IELTS reading tests and AI band scores", caption: "AI-graded IELTS reading tests" },
+    ],
+    problem:
+      "Teachers juggle homework in chats and spreadsheets, and IELTS practice tests are graded by hand.",
+    approach:
+      "Built separate teacher and student portals on Supabase with realtime updates. Teachers paste a reading test, Gemini AI extracts the passages and 40 questions, and students sit a timed computer-delivered exam in strict mode.",
+    result:
+      "Assigning, submitting and reviewing happen in one place, and IELTS reading results come back instantly with an official band score.",
+    decisions: [
+      "Reusable task library with one-click assign",
+      "Strict exam mode — fullscreen and tab-switch detection",
+      "Automatic grading with the official IELTS band table",
+    ],
+  },
+  {
+    slug: "navbatgo",
+    number: "03",
     title: "NavbatGo",
     category: "Product / Frontend / Realtime",
     description:
@@ -49,7 +122,7 @@ export const projects: Project[] = [
   },
   {
     slug: "ramadan-app",
-    number: "02",
+    number: "04",
     title: "Ramadan App",
     category: "Product / Mobile / Telegram",
     description:
@@ -67,7 +140,7 @@ export const projects: Project[] = [
   },
   {
     slug: "react-33-days",
-    number: "03",
+    number: "05",
     title: "33 Days of React",
     category: "Education / Learning",
     description:
@@ -85,7 +158,7 @@ export const projects: Project[] = [
   },
   {
     slug: "localuz",
-    number: "04",
+    number: "06",
     title: "LocalUz",
     category: "Product / Social / Travel",
     description:
@@ -103,7 +176,7 @@ export const projects: Project[] = [
   },
   {
     slug: "classroom-suite",
-    number: "05",
+    number: "07",
     title: "Classroom Suite",
     category: "Education / Internal Tools",
     description:
